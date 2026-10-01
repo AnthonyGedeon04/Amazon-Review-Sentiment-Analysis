@@ -1,5 +1,9 @@
 # Amazon Review Sentiment Analysis
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/)
+[![tests](https://github.com/AnthonyGedeon04/Amazon-Review-Sentiment-Analysis/actions/workflows/tests.yml/badge.svg)](https://github.com/AnthonyGedeon04/Amazon-Review-Sentiment-Analysis/actions/workflows/tests.yml)
+
 Classifies Amazon Echo Dot 2 reviews as **satisfied**, **neutral**, or **not satisfied**, using labels derived from star ratings (4-5, 3, 1-2).
 
 **Final model:** DeBERTa-v3 base, macro-F1 **0.752** and accuracy **0.887** on 8,840 held-out reviews, ahead of the best classical model (TF-IDF + logistic regression, 0.711). A small Flask web app lets you type a review and see the prediction.
@@ -13,6 +17,7 @@ amazon-review-sentiment/
 ├── Output/         results JSON (results/), charts; results_v1_text_only/ = first round, text only
 ├── Requirements/   requirements.txt, requirements-transformer.txt, requirements-app.txt
 ├── app/            Flask web app (see app/README.md)
+├── tests/          automated tests for predict.py and the web app (see Tests)
 └── predict.py      predict sentiment for new reviews with the final model
 ```
 
@@ -162,3 +167,16 @@ python app/app.py
 ```
 
 Wait for `Model ready`, then open <http://127.0.0.1:5000>. More details and the API are in [app/README.md](app/README.md).
+
+## Tests
+
+`tests/` checks `predict.py` and the web app: the input format, that probabilities add up to 1, that the cutoff offsets change the prediction, and that the API returns a label with a score per class and rejects empty or too-long reviews. The tests use a tiny randomly initialised stand-in model, so they run in a few seconds without the trained DeBERTa. GitHub Actions runs them on every push (the **tests** badge at the top). To run them yourself:
+
+```bash
+pip install -r Requirements/requirements-app.txt pytest
+pytest
+```
+
+## License
+
+This project is released under the [MIT License](LICENSE).

@@ -6,7 +6,7 @@ Run it from the project folder, with the same .venv the notebooks use:
 then open http://127.0.0.1:5000
 
 The model is loaded once when the app starts (it takes a little while and a few hundred MB of RAM), then every
-request reuses it. See app/README.md for putting it online on Hugging Face Spaces.
+request reuses it.
 """
 import json
 import os
@@ -27,16 +27,17 @@ from model_files import MODEL_NAME, ensure_model_files  # noqa: E402
 
 MAX_CHARS = 5000        # the model only reads the first ~64 tokens anyway
 GITHUB_URL = os.environ.get('GITHUB_URL', '')   # shown in the footer when set
+MODEL_ROOT = Path(os.environ.get('MODEL_ROOT', ROOT))   # folder holding Output/models and Output/results (the tests point it elsewhere)
 
-ensure_model_files()
+ensure_model_files(root=MODEL_ROOT)
 print(f'Loading {MODEL_NAME} ...', flush=True)
 _t0 = time.time()
-model = SentimentModel(MODEL_NAME, ROOT)
+model = SentimentModel(MODEL_NAME, MODEL_ROOT)
 model.predict_proba(['warm up'])   # the first call is slow, so do it before any visitor arrives
 print(f'Model ready in {time.time() - _t0:.0f}s', flush=True)
 _lock = threading.Lock()   # one prediction at a time keeps memory flat on a small machine
 
-_result = json.load(open(ROOT / 'Output' / 'results' / f'{MODEL_NAME}.json'))
+_result = json.load(open(MODEL_ROOT / 'Output' / 'results' / f'{MODEL_NAME}.json'))
 MODEL_INFO = {
     'name': MODEL_NAME,
     'macro_f1': _result.get('macro_f1'),
