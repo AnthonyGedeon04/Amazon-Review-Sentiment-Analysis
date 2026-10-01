@@ -1,0 +1,20 @@
+{
+  "model": "complement_nb",
+  "family": "classical",
+  "macro_f1": 0.6788261205339499,
+  "accuracy": 0.8589366515837104,
+  "recall_not satisfied": 0.6595744680851063,
+  "recall_neutral": 0.47152317880794703,
+  "recall_satisfied": 0.9314677327241576,
+  "f1_not satisfied": 0.6836049856184084,
+  "f1_neutral": 0.4117987275882013,
+  "f1_satisfied": 0.9410746483952398,
+  "input": "title+text",
+  "macro_f1_untuned": 0.6469375506887373,
+  "offsets": [
+    0.0,
+    0.3,
+    0.0
+  ],
+  "train_seconds": 33
+}

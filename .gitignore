@@ -1,0 +1,19 @@
+# --- Too big for GitHub: the trained transformer models (recreate them with notebook 05) ---
+Output/models/
+Output/checkpoints/
+Output/partial_predictions_*.npy
+*_predictions.csv
+
+# --- Dataset: download it from Kaggle (see Data/README.md) instead of re-publishing it ---
+Data/*.csv
+
+# --- Local Python / editor files ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+Thumbs.db
+

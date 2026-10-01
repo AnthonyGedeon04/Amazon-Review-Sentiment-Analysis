@@ -1,0 +1,13 @@
+{
+  "model": "sgd_hinge_undersampled",
+  "family": "classical",
+  "macro_f1": 0.6352636453950408,
+  "accuracy": 0.7881221719457013,
+  "recall_not satisfied": 0.6586493987049029,
+  "recall_neutral": 0.6225165562913907,
+  "recall_satisfied": 0.8259565962307253,
+  "f1_not satisfied": 0.6340160284951024,
+  "f1_neutral": 0.3782696177062374,
+  "f1_satisfied": 0.8935052899837825,
+  "train_rows": 9051
+}

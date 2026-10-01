@@ -1,0 +1,13 @@
+{
+  "model": "wordchar_svm_balanced",
+  "family": "classical",
+  "macro_f1": 0.6882100211291989,
+  "accuracy": 0.8682126696832579,
+  "recall_not satisfied": 0.7160037002775208,
+  "recall_neutral": 0.4198675496688742,
+  "recall_satisfied": 0.9400342661336379,
+  "f1_not satisfied": 0.711070280202113,
+  "f1_neutral": 0.41009055627425617,
+  "f1_satisfied": 0.9434692269112274,
+  "train_seconds": 22
+}

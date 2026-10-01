@@ -1,0 +1,33 @@
+{
+  "model": "deberta_v3_base_medium",
+  "family": "transformer",
+  "macro_f1": 0.7520308411979336,
+  "accuracy": 0.8874434389140271,
+  "recall_not satisfied": 0.7659574468085106,
+  "recall_neutral": 0.6410596026490066,
+  "recall_satisfied": 0.9327527127355797,
+  "f1_not satisfied": 0.7852062588904695,
+  "f1_neutral": 0.5170940170940171,
+  "f1_satisfied": 0.9537922476093146,
+  "checkpoint": "microsoft/deberta-v3-base",
+  "preset": "medium",
+  "input": "title+text",
+  "macro_f1_untuned": 0.7303774001807687,
+  "offsets": [
+    -1.0,
+    -1.2,
+    0.0
+  ],
+  "val_curve": [
+    [
+      0.5,
+      0.6913
+    ],
+    [
+      1.0,
+      0.7198
+    ]
+  ],
+  "device": "cpu",
+  "train_seconds": 10998
+}

@@ -1,0 +1,20 @@
+{
+  "model": "wordchar_logreg_balanced",
+  "family": "classical",
+  "macro_f1": 0.7007374657769251,
+  "accuracy": 0.8647058823529412,
+  "recall_not satisfied": 0.6790009250693803,
+  "recall_neutral": 0.5350993377483444,
+  "recall_satisfied": 0.9288977727013136,
+  "f1_not satisfied": 0.7115850702859913,
+  "f1_neutral": 0.4488888888888889,
+  "f1_satisfied": 0.9417384381558949,
+  "input": "title+text",
+  "macro_f1_untuned": 0.6973665351343638,
+  "offsets": [
+    -0.6,
+    -0.4,
+    0.0
+  ],
+  "train_seconds": 270
+}

@@ -1,0 +1,20 @@
+{
+  "model": "logreg_balanced",
+  "family": "classical",
+  "macro_f1": 0.7058021511342334,
+  "accuracy": 0.8642533936651584,
+  "recall_not satisfied": 0.72895467160037,
+  "recall_neutral": 0.543046357615894,
+  "recall_satisfied": 0.9197601370645345,
+  "f1_not satisfied": 0.7219422812643151,
+  "f1_neutral": 0.45454545454545453,
+  "f1_satisfied": 0.9409187175929307,
+  "input": "title+text",
+  "macro_f1_untuned": 0.6983402183294675,
+  "offsets": [
+    -0.3,
+    -0.3,
+    0.0
+  ],
+  "train_seconds": 60
+}

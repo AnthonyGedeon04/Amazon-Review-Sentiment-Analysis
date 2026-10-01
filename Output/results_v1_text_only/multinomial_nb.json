@@ -1,0 +1,13 @@
+{
+  "model": "multinomial_nb",
+  "family": "classical",
+  "macro_f1": 0.5954086981382758,
+  "accuracy": 0.8596153846153847,
+  "recall_not satisfied": 0.6022201665124884,
+  "recall_neutral": 0.12582781456953643,
+  "recall_satisfied": 0.9784408909194746,
+  "f1_not satisfied": 0.6609137055837564,
+  "f1_neutral": 0.19527235354573483,
+  "f1_satisfied": 0.9300400352853362,
+  "train_seconds": 3
+}

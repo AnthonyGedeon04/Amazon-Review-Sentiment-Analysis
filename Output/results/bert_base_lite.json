@@ -1,0 +1,23 @@
+{
+  "model": "bert_base_lite",
+  "family": "transformer",
+  "macro_f1": 0.6653370735523597,
+  "accuracy": 0.8664027149321267,
+  "recall_not satisfied": 0.692876965772433,
+  "recall_neutral": 0.3258278145695364,
+  "recall_satisfied": 0.9514563106796117,
+  "f1_not satisfied": 0.7006548175865295,
+  "f1_neutral": 0.35344827586206895,
+  "f1_satisfied": 0.9419081272084806,
+  "checkpoint": "bert-base-uncased",
+  "preset": "lite",
+  "input": "title+text",
+  "macro_f1_untuned": 0.6683114047476267,
+  "offsets": [
+    -0.3,
+    -0.5,
+    0.0
+  ],
+  "device": "cpu",
+  "train_seconds": 3071
+}

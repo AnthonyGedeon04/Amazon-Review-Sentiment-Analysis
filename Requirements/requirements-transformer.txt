@@ -1,0 +1,11 @@
+# Notebook 03: transformer fine-tuning. Installs requirements.txt too.
+# With an NVIDIA GPU, install the CUDA build of PyTorch from https://pytorch.org/get-started/locally/ BEFORE this file.
+-r requirements.txt
+torch>=2.4
+transformers>=5.0
+datasets>=3.0
+accelerate>=1.0
+# tokenizer backends: DeBERTa-v3 needs sentencepiece + protobuf; tiktoken covers transformers' fallback path
+sentencepiece>=0.2.1
+protobuf>=4.25
+tiktoken>=0.7

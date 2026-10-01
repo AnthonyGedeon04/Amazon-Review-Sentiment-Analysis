@@ -1,0 +1,23 @@
+{
+  "model": "roberta_base_lite",
+  "family": "transformer",
+  "macro_f1": 0.6720910403382981,
+  "accuracy": 0.8669683257918552,
+  "recall_not satisfied": 0.5874190564292322,
+  "recall_neutral": 0.4198675496688742,
+  "recall_satisfied": 0.9583095374071959,
+  "f1_not satisfied": 0.6666666666666666,
+  "f1_neutral": 0.40485312899106,
+  "f1_satisfied": 0.9447533253571679,
+  "checkpoint": "roberta-base",
+  "preset": "lite",
+  "input": "title+text",
+  "macro_f1_untuned": 0.6686705274432656,
+  "offsets": [
+    -0.2,
+    -0.3,
+    0.0
+  ],
+  "device": "cpu",
+  "train_seconds": 3287
+}

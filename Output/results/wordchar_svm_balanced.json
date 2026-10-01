@@ -1,0 +1,20 @@
+{
+  "model": "wordchar_svm_balanced",
+  "family": "classical",
+  "macro_f1": 0.7014291515747333,
+  "accuracy": 0.8650452488687783,
+  "recall_not satisfied": 0.6244218316373727,
+  "recall_neutral": 0.5894039735099338,
+  "recall_satisfied": 0.9318960593946316,
+  "f1_not satisfied": 0.6940874035989717,
+  "f1_neutral": 0.46596858638743455,
+  "f1_satisfied": 0.9442314647377938,
+  "input": "title+text",
+  "macro_f1_untuned": 0.7045015532360067,
+  "offsets": [
+    -0.1,
+    0.2,
+    0.0
+  ],
+  "train_seconds": 161
+}

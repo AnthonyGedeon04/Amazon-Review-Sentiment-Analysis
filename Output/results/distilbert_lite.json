@@ -1,0 +1,23 @@
+{
+  "model": "distilbert_lite",
+  "family": "transformer",
+  "macro_f1": 0.657300248546979,
+  "accuracy": 0.8576923076923076,
+  "recall_not satisfied": 0.6475485661424607,
+  "recall_neutral": 0.3629139072847682,
+  "recall_satisfied": 0.9434608794974301,
+  "f1_not satisfied": 0.6766553890768487,
+  "f1_neutral": 0.35607537361923325,
+  "f1_satisfied": 0.939169982944855,
+  "checkpoint": "distilbert-base-uncased",
+  "preset": "lite",
+  "input": "title+text",
+  "macro_f1_untuned": 0.6597291174909398,
+  "offsets": [
+    -0.9,
+    -0.9,
+    0.0
+  ],
+  "device": "cpu",
+  "train_seconds": 1618
+}

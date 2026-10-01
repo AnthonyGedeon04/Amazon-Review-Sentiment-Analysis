@@ -1,0 +1,13 @@
+{
+  "model": "complement_nb",
+  "family": "classical",
+  "macro_f1": 0.6317949210664418,
+  "accuracy": 0.8589366515837104,
+  "recall_not satisfied": 0.7807585568917669,
+  "recall_neutral": 0.21324503311258278,
+  "recall_satisfied": 0.9406053683609366,
+  "f1_not satisfied": 0.679822795006041,
+  "f1_neutral": 0.2766323024054983,
+  "f1_satisfied": 0.9389296657877859,
+  "train_seconds": 3
+}

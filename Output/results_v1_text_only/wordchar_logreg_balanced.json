@@ -1,0 +1,13 @@
+{
+  "model": "wordchar_logreg_balanced",
+  "family": "classical",
+  "macro_f1": 0.6853441361229953,
+  "accuracy": 0.8450226244343891,
+  "recall_not satisfied": 0.7197039777983348,
+  "recall_neutral": 0.5602649006622517,
+  "recall_satisfied": 0.8950599657338664,
+  "f1_not satisfied": 0.6949531040643144,
+  "f1_neutral": 0.43075356415478616,
+  "f1_satisfied": 0.930325740149885,
+  "train_seconds": 43
+}

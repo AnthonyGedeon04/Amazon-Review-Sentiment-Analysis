@@ -1,0 +1,20 @@
+{
+  "model": "sgd_hinge_balanced",
+  "family": "classical",
+  "macro_f1": 0.705472079927997,
+  "accuracy": 0.8675339366515837,
+  "recall_not satisfied": 0.6669750231267345,
+  "recall_neutral": 0.5708609271523178,
+  "recall_satisfied": 0.9304683038263849,
+  "f1_not satisfied": 0.7044455300439668,
+  "f1_neutral": 0.46645021645021645,
+  "f1_satisfied": 0.9455204932898078,
+  "input": "title+text",
+  "macro_f1_untuned": 0.7022378580774306,
+  "offsets": [
+    0.0,
+    0.3,
+    0.0
+  ],
+  "train_seconds": 31
+}

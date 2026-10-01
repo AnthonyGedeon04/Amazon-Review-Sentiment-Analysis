@@ -1,0 +1,13 @@
+model,family,preset,input,macro_f1,macro_f1_untuned,accuracy,recall_not satisfied,recall_neutral,recall_satisfied,f1_neutral
+deberta_v3_base_lite,transformer,lite,title+text,0.719,0.704,0.875,0.757,0.534,0.929,0.458
+twitter_roberta_sentiment_lite,transformer,lite,title+text,0.712,0.708,0.873,0.68,0.55,0.938,0.458
+logreg_unweighted,classical,,title+text,0.711,0.639,0.869,0.683,0.567,0.93,0.47
+logreg_balanced,classical,,title+text,0.706,0.698,0.864,0.729,0.543,0.92,0.455
+sgd_hinge_balanced,classical,,title+text,0.705,0.702,0.868,0.667,0.571,0.93,0.466
+wordchar_svm_balanced,classical,,title+text,0.701,0.705,0.865,0.624,0.589,0.932,0.466
+wordchar_logreg_balanced,classical,,title+text,0.701,0.697,0.865,0.679,0.535,0.929,0.449
+multinomial_nb,classical,,title+text,0.68,0.613,0.863,0.683,0.43,0.937,0.408
+complement_nb,classical,,title+text,0.679,0.647,0.859,0.66,0.472,0.931,0.412
+roberta_base_lite,transformer,lite,title+text,0.672,0.669,0.867,0.587,0.42,0.958,0.405
+bert_base_lite,transformer,lite,title+text,0.665,0.668,0.866,0.693,0.326,0.951,0.353
+distilbert_lite,transformer,lite,title+text,0.657,0.66,0.858,0.648,0.363,0.943,0.356

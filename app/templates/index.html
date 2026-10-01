@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review Sentiment · Echo Dot</title>
+  <meta name="description" content="Paste an Amazon review and a fine-tuned DeBERTa-v3 model says whether the customer is satisfied, neutral or not satisfied.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%232f6fed'/><path d='M10 19c1.6 2.4 3.6 3.5 6 3.5s4.4-1.1 6-3.5' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round'/><circle cx='11.5' cy='12.5' r='1.8' fill='white'/><circle cx='20.5' cy='12.5' r='1.8' fill='white'/></svg>">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <p class="eyebrow">Amazon review sentiment</p>
+      <h1>Is this customer happy?</h1>
+      <p class="lede">Write or paste a product review. A DeBERTa-v3 model fine-tuned on 53,000 Amazon Echo Dot reviews
+        sorts it into <span class="tag tag-not-satisfied">not satisfied</span>, <span class="tag tag-neutral">neutral</span>
+        or <span class="tag tag-satisfied">satisfied</span>.</p>
+    </header>
+
+    <section class="card">
+      <form id="review-form" novalidate>
+        <label for="title">Review title <span class="optional">optional</span></label>
+        <input id="title" name="title" type="text" maxlength="200" autocomplete="off"
+               placeholder="e.g. Great little speaker">
+
+        <label for="text">Review</label>
+        <textarea id="text" name="text" rows="6" maxlength="{{ max_chars }}" required
+                  placeholder="e.g. Setup took two minutes and Alexa understands me from across the room."></textarea>
+
+        <div class="form-row">
+          <span id="counter" class="counter">0 / {{ '{:,}'.format(max_chars) }}</span>
+          <div class="buttons">
+            <button type="button" id="clear" class="btn btn-quiet">Clear</button>
+            <button type="submit" id="submit" class="btn btn-primary">
+              <span class="btn-label">Analyze</span><span class="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <p class="hint">Tip: press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to analyze.</p>
+      </form>
+
+      <div class="examples">
+        <span class="examples-label">Try an example:</span>
+        <button type="button" class="chip" data-title="Love it" data-text="Setup took two minutes and Alexa understands me from across the room. Bought a second one for the kitchen.">Happy</button>
+        <button type="button" class="chip" data-title="It's ok" data-text="Works fine for timers and the weather, but the speaker is really weak for music. You need to plug it into a real speaker.">Mixed</button>
+        <button type="button" class="chip" data-title="Stopped working" data-text="Kept dropping the wifi connection every day and after three weeks it would not turn on at all. Returning it.">Unhappy</button>
+      </div>
+    </section>
+
+    <section id="result" class="card result" hidden aria-live="polite">
+      <div class="result-head">
+        <p class="result-caption">Prediction</p>
+        <p id="result-label" class="result-label"></p>
+      </div>
+      <div id="bars" class="bars"></div>
+      <p id="result-meta" class="result-meta"></p>
+    </section>
+
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <section class="about">
+      <h2>About the model</h2>
+      <ul class="stats">
+        {% if info.macro_f1 %}<li><strong>{{ '%.3f' % info.macro_f1 }}</strong><span>macro-F1 on 8,840 held-out reviews</span></li>{% endif %}
+        {% if info.accuracy %}<li><strong>{{ '%.1f' % (info.accuracy * 100) }}%</strong><span>accuracy</span></li>{% endif %}
+        <li><strong>3</strong><span>classes: 1-2★, 3★, 4-5★</span></li>
+      </ul>
+      <p>Labels come from star ratings, so the hardest class is <em>neutral</em>: 3-star reviews often read like 2 or 4 stars.
+        Every review is about the same product, so the model is sharpest on smart-speaker language.
+        Scores include the per-class cutoff adjustment tuned during training, so the tallest bar is always the prediction.</p>
+    </section>
+
+    <footer class="footer">
+      <span>Flask · PyTorch · Hugging Face Transformers · model: <code>{{ info.name }}</code></span>
+      {% if github_url %}<a href="{{ github_url }}">Source on GitHub</a>{% endif %}
+    </footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

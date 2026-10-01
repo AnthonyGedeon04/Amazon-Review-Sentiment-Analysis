@@ -1,0 +1,13 @@
+{
+  "model": "logreg_balanced",
+  "family": "classical",
+  "macro_f1": 0.6828901756516285,
+  "accuracy": 0.8409502262443439,
+  "recall_not satisfied": 0.7197039777983348,
+  "recall_neutral": 0.5668874172185431,
+  "recall_satisfied": 0.8892061679040548,
+  "f1_not satisfied": 0.6958855098389982,
+  "f1_neutral": 0.4254473161033797,
+  "f1_satisfied": 0.9273377010125075,
+  "train_seconds": 17
+}

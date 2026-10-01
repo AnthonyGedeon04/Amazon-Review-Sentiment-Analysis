@@ -1,0 +1,13 @@
+{
+  "model": "logreg_undersampled",
+  "family": "classical",
+  "macro_f1": 0.6548946280366287,
+  "accuracy": 0.7932126696832579,
+  "recall_not satisfied": 0.6975023126734505,
+  "recall_neutral": 0.6768211920529801,
+  "recall_satisfied": 0.8205311250713878,
+  "f1_not satisfied": 0.6738159070598749,
+  "f1_neutral": 0.39813011297234124,
+  "f1_satisfied": 0.8927378640776699,
+  "train_rows": 9051
+}

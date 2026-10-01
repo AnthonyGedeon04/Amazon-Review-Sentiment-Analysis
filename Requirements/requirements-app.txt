@@ -1,0 +1,10 @@
+# Web app (app/app.py): the model libraries from requirements-transformer.txt plus Flask
+numpy>=1.26
+torch>=2.4
+transformers>=5.0
+sentencepiece>=0.2.1
+protobuf>=4.25
+tiktoken>=0.7
+huggingface_hub>=0.34   # downloads the model when MODEL_REPO is set
+flask>=3.0
+gunicorn>=22.0; platform_system != "Windows"   # server used on Hugging Face Spaces (Linux only)

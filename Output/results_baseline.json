@@ -1,0 +1,9 @@
+{
+  "model": "tfidf_logreg_balanced",
+  "macro_f1": 0.6828901756516285,
+  "recall": {
+    "not satisfied": 0.7197039777983348,
+    "neutral": 0.5668874172185431,
+    "satisfied": 0.8892061679040548
+  }
+}

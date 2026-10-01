@@ -1,0 +1,13 @@
+{
+  "best_model": "logreg_unweighted",
+  "family": "classical",
+  "preset": NaN,
+  "input": "title+text",
+  "macro_f1": 0.7105356095310613,
+  "macro_f1_untuned": 0.6387125680863857,
+  "accuracy": 0.8691176470588236,
+  "recall_not satisfied": 0.6827012025901943,
+  "recall_neutral": 0.5668874172185431,
+  "recall_satisfied": 0.9304683038263849,
+  "f1_neutral": 0.4703296703296703
+}

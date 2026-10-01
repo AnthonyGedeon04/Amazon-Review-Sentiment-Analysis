@@ -1,0 +1,23 @@
+{
+  "model": "twitter_roberta_sentiment_lite",
+  "family": "transformer",
+  "macro_f1": 0.7115030752561639,
+  "accuracy": 0.8731900452488688,
+  "recall_not satisfied": 0.6799259944495837,
+  "recall_neutral": 0.5496688741721855,
+  "recall_satisfied": 0.9378926327812679,
+  "f1_not satisfied": 0.7277227722772277,
+  "f1_neutral": 0.45805739514348787,
+  "f1_satisfied": 0.9487290583477759,
+  "checkpoint": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+  "preset": "lite",
+  "input": "title+text",
+  "macro_f1_untuned": 0.7084922551489073,
+  "offsets": [
+    -0.9,
+    -1.0,
+    0.0
+  ],
+  "device": "cpu",
+  "train_seconds": 3384
+}
