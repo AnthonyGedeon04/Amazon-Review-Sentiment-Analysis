@@ -3,6 +3,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/)
 [![tests](https://github.com/AnthonyGedeon04/Amazon-Review-Sentiment-Analysis/actions/workflows/tests.yml/badge.svg)](https://github.com/AnthonyGedeon04/Amazon-Review-Sentiment-Analysis/actions/workflows/tests.yml)
+[![macro-F1 0.752](https://img.shields.io/badge/macro--F1-0.752-brightgreen.svg)](#final-model-in-detail-notebook-07)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Hugging Face Transformers](https://img.shields.io/badge/Transformers-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/docs/transformers)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
+[![Flask](https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Last commit](https://img.shields.io/github/last-commit/AnthonyGedeon04/Amazon-Review-Sentiment-Analysis)](https://github.com/AnthonyGedeon04/Amazon-Review-Sentiment-Analysis/commits/main)
 
 Classifies Amazon Echo Dot 2 reviews as **satisfied**, **neutral**, or **not satisfied**, using labels derived from star ratings (4-5, 3, 1-2).
 
